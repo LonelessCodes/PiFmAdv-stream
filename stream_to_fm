@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ffmpeg -i "$ICECAST_MOUNT" -f wav -acodec pcm_s16le -ac 2 - | ./pi_fm_adv --freq "$FM_FREQ" --pi FFFF --ps "$FM_NAME" --wait 10 --audio -
